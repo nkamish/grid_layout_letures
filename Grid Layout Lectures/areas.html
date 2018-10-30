@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Areas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <script src="main.js"></script>
+
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr 10fr 1fr;
+            grid-template-rows: 150px 150px 150px;
+            grid-template-areas: 
+                "content1 content1 conent1"
+                "sidebar1 content2 sidebar2"
+                "footer footer footer";
+        }
+        .item1 {
+            grid-area: content1;
+            background-color: rgb(0, 250, 0);
+            grid-column: 1 / -1;
+        }
+        .item2 {
+            grid-area: sidebar1;
+            background-color: rgb(4, 144, 238);
+        }
+        .item3 {
+            grid-area: content2;
+            background-color: rgb(255, 187, 0);
+        }
+        .item4 {
+            grid-area: sidebar2;
+            background-color: rgb(205, 228, 0);
+        }
+        .item5 {
+            grid-area: footer;
+            background-color: rgb(243, 9, 9);
+        }
+
+        /* adding responsive design */
+
+        @media screen and (max-width:1024px){
+            .container{
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: 1fr 10fr 1fr;
+                grid-template-rows: 150px 150px 150px;
+                grid-template-areas: 
+                "content1 content 1"
+                "content2 content2 ."
+                "sidebar1 sidebar2 ."
+                "footer footer .";
+            }    
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">#CRISP 👌🏻</div>
+        <div class="item item2">👌</div>
+        <div class="item item3">#RESPONSIVE 👌🏻</div>
+        <div class="item item4">👌</div>
+        <div class="item item5">#CRISP 👌🏻</div>
+    </div>
+</body>
+</html>
